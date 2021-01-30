@@ -17,6 +17,13 @@ Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+Plug 'voldikss/vim-floaterm'
+"Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'liuchengxu/vim-which-key'
+Plug 'metakirby5/codi.vim'
+    Plug 'francoiscabrol/ranger.vim'
+    Plug 'rbgrouleff/bclose.vim'
+
 
 """"""""""""""""""""""""""""""""""""""""
 " => Plugins with 
