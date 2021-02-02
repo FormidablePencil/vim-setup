@@ -23,6 +23,12 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'metakirby5/codi.vim'
     Plug 'francoiscabrol/ranger.vim'
     Plug 'rbgrouleff/bclose.vim'
+    Plug 'mattn/emmet-vim'
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+
+"Plug 'christianchiarulli/nvcode-color-schemes.vim'
+"Plug 'nvim-treesitter/nvim-treesitter'
 
 """"""""""""""""""""""""""""""""""""""""
 " => Plugins with 

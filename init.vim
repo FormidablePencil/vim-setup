@@ -5,6 +5,7 @@ source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
+"source $HOME/.config/nvim/plug-config/treesitter.vim
 
 set list
 set expandtab
@@ -27,13 +28,14 @@ colorscheme gruvbox
 set hlsearch
 hi Normal guibg=NONE ctermbg=NONE
 hi Search cterm=NONE ctermfg=black ctermbg=LightBlue
- let g:lightline.colorscheme = 'default'
+ "let g:lightline.colorscheme = 'default'
  let g:lightline = {'colorscheme': 'wombat' }
-let g:airline_theme='term' "biogoo, wombat, transparent, minimalist, term, behilet
+let g:airline_theme='transparent' "biogoo, wombat, transparent, minimalist, term, behilet, owo
+"biogoo, grayscale, transparent
 set termguicolors
 
 " Commands
-let mapleader = ","
+let mapleader = " "
 let localmapleader = "."
 
 
@@ -157,6 +159,42 @@ call which_key#register('<Space>', "g:which_key_map")
 "    endif
 "endfunction
 "nnoremap <C-t> : call Toggle_transparent()<CR>
+
+
+
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
+
+" make into tabs
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 
 
