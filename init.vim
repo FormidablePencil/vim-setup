@@ -27,16 +27,16 @@ colorscheme gruvbox
 set hlsearch
 hi Normal guibg=NONE ctermbg=NONE
 hi Search cterm=NONE ctermfg=black ctermbg=LightBlue
- "let g:lightline.colorscheme = 'default'
+ let g:lightline.colorscheme = 'default'
  let g:lightline = {'colorscheme': 'wombat' }
 let g:airline_theme='term' "biogoo, wombat, transparent, minimalist, term, behilet
 set termguicolors
 
 " Commands
 let mapleader = ","
+let localmapleader = "."
 
-imap jk <esc>
-imap qw <Esc>
+
 
 command! Rl execute "source $MYVIMRC" " reload Vim
 nnoremap <leader>rv :source $MYVIMRC<CR> 
@@ -52,7 +52,6 @@ command! Codef execute "e ~/Documents/code"
 command! Otherf execute "e ~/Documents/code/other"
 command! Webf execute "e ~/Documents/code/websites"
 command! Zshrc execute "e ~/.zshrc"
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 " prettier format on save
 "command! -nargs=0 Prettier :CocCommand prettier.formatFile
 ":CocCommand prettier.formatFile
@@ -61,9 +60,11 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 
 
+nnoremap <silent> . :WhichKey '<localleader>'<CR>
+
 " Map leader to which_key
-nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <localleader> :silent WhichKey '<localleader>'<CR>
+vnoremap <silent> <localleader> :silent <c-u> :silent WhichKeyVisual '<localleader>'<CR>
 
 " Create map to add keys to
 let g:which_key_map =  {}
@@ -84,7 +85,10 @@ highlight default link WhichKeyDesc      Function
 " Hide status line
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 oshowmode ruler
+  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
+
+
+
 
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]

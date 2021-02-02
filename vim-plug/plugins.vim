@@ -24,7 +24,6 @@ Plug 'metakirby5/codi.vim'
     Plug 'francoiscabrol/ranger.vim'
     Plug 'rbgrouleff/bclose.vim'
 
-
 """"""""""""""""""""""""""""""""""""""""
 " => Plugins with 
 """"""""""""""""""""""""""""""""""""""""
