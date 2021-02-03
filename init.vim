@@ -30,7 +30,8 @@ let g:startify_session_dir = '~/.config/nvim/sessions'
 
 " let g:gruvbox_contrast_dark='soft'
 set termguicolors
-colorscheme base16-tomorrow-night
+"colorscheme base16-tomorrow-night
+colorscheme spacegray
 set hlsearch
 hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=transparent

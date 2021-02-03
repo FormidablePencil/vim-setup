@@ -26,7 +26,7 @@ Plug 'metakirby5/codi.vim'
     Plug 'mattn/emmet-vim'
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'chriskempson/base16-vim'
-
+Plug 'ackyshake/Spacegray.vim'
 
 "Plug 'christianchiarulli/nvcode-color-schemes.vim'
 "Plug 'nvim-treesitter/nvim-treesitter'
