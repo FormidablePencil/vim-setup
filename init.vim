@@ -6,7 +6,6 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 "source $HOME/.config/nvim/plug-config/treesitter.vim
-source $HOME/.config/nvim/plug-config/which-key.vim
 
 set list
 set expandtab
@@ -47,7 +46,8 @@ let g:airline_theme='transparent' "biogoo, wombat, transparent, minimalist, term
 let mapleader = " "
 let localmapleader = "."
 
-
+" Which key needs to know leader
+source $HOME/.config/nvim/plug-config/which-key.vim
 
 command! Rl execute "source $MYVIMRC" " reload Vim
 nnoremap <leader>rv :source $MYVIMRC<CR> 
@@ -70,7 +70,6 @@ command! Zshrc execute "e ~/.zshrc"
 ":CocCommand prettier.formatFile
 
 
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 
 
 
