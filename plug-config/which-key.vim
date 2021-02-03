@@ -16,11 +16,23 @@ let g:vanilla_vim_map.1 = {
 let g:vanilla_vim_map.2 = {
       \'name' : 'nav in file' ,
       \ 'gg , G' : [''     , 'go to top/bottom of file']          ,
+\ 'ctrl u/d' : ['','scrolls up/down half a page'],
+\ 'ctrl b/f' : ['','scrolls up/down a page'],
+\ 'ctrl y/e' : ['','scroll but cursor in place'],
       \ '<C-p>' : [''     , 'fuzzy find']          ,
+\ 'gr, gd' : ['','go to symbol definition'],
+\ 'gD' : ['','find all instances of symbol'],
+\ '*' : ['','go to next symbol'],
+\ 's|S<chars>, t|T|f|F<char> (spam s|S to go next)' : ['','sneak navigation (primary method)'],
+\ 'w,e b' : ['','jump by word'],
+\ 'shift + ]/[' : ['','Jump to next/prev empty line'],
+\ 'gf go' : ['','click on hyperlink and go back'],
+\ 'n,N' : ['','jump to next/prev found item'],
       \ }
 
 let g:vanilla_vim_map.3 = {
       \'name' : 'edit' ,
+\ 'd,c,v{$|^}' : ['','from where at to end/beginning of line '],
       \ "{d/v/y/c}i ~ ',w,[,{,p,t"    : [""     , 'delete/select/yank/change inner word, {}, [], ", paragraph, tag' ]          ,
       \ 'shift d'                 : [''     , 'delete from where you are to the end']          ,
       \ ' d<num>j/k'                 : [''     , 'deleted from where u at to desired number']          ,
@@ -30,6 +42,8 @@ let g:vanilla_vim_map.3 = {
       \ 'ctrl h'                     : [''     , '(i) delete letter']          ,
       \ 'ctrl w'                     : [''     , '(i) delete word']          ,
       \ 'o,O'                     : [''     , 'insert line above/below']          ,
+      \'ctrl 6' : ['','jump back to prev file'],
+\ 'ctrl y ,' : ['','activate emmet snippet'],
       \ }
 
 let g:vanilla_vim_map.4 = {
@@ -39,6 +53,7 @@ let g:vanilla_vim_map.4 = {
       \ 'space rv'                : [''     , 'restart vim']          ,
       \ '<C-\><C-n>'                     : [''     , 'close terminal']          ,
       \ ':e'                     : [''     , 'reopen file']          ,
+\ ':mn' : ['','see all commands or plugins'],
       \ } 
 
 let g:vanilla_vim_map.5 = {
@@ -55,8 +70,7 @@ let g:vanilla_vim_map.6 = {
       \ } 
 
 let g:vanilla_vim_map.7 = {
-      \'name' : 'name' ,
-      \ 'cmd'          : [''     , 'definition']          ,
+      \'name' : 'VimWiki' ,
       \ } 
 
 let g:vanilla_vim_map.8 = {
