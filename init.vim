@@ -35,6 +35,10 @@ colorscheme spacegray
 set hlsearch
 hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=transparent
+" colors for sneak
+highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
+highlight SneakScope guifg=red guibg=pink ctermfg=red ctermbg=blue
+
 
  "let g:lightline.colorscheme = 'default'
  let g:lightline = {'colorscheme': 'wombat' }

@@ -1,5 +1,7 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+Plug 'chriskempson/base16-vim'
+Plug 'ackyshake/Spacegray.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'HerringtonDarkholme/yats'
   Plug 'preservim/nerdtree'
@@ -18,37 +20,16 @@ Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 Plug 'voldikss/vim-floaterm'
-"Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+"Plug 'liuchengxu/vim-which-key'
 Plug 'metakirby5/codi.vim'
     Plug 'francoiscabrol/ranger.vim'
     Plug 'rbgrouleff/bclose.vim'
     Plug 'mattn/emmet-vim'
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'chriskempson/base16-vim'
-Plug 'ackyshake/Spacegray.vim'
 
 "Plug 'christianchiarulli/nvcode-color-schemes.vim'
 "Plug 'nvim-treesitter/nvim-treesitter'
 
-""""""""""""""""""""""""""""""""""""""""
-" => Plugins with 
-""""""""""""""""""""""""""""""""""""""""
-
 call plug#end()
-
-  set nocompatible              " be iMproved, required
-  filetype off                  " required
-
-   " set the runtime path to include Vundle and initialize
-   set rtp+=~/.config/nvim/bundle/Vundle.vim
-   call vundle#begin()
-
-  ""   Plugin 'VundleVim/Vundle.vim'
-  "" Plugin 'rigellute/shades-of-purple.vim'
-  "" Plugin 'carakan/new-railscasts-theme'
-
-
- call vundle#end()               " required
-  filetype plugin indent on       " required
 

@@ -26,7 +26,7 @@ nnoremap <leader>md :e ~/Documents/code<CR>
 nnoremap <leader>mo :e ~/Documents/code/other<CR>
 nnoremap <leader>mw :e ~/Documents/code/websites<CR>
 nnoremap <leader>mz :e ~/.zshrc<CR>
-
+nnoremap <leader>mx :e ~/.config/nvim/plug-config/coc-config.vim<CR>
 
 " prettier format on save
 "command! -nargs=0 Prettier :CocCommand prettier.formatFile
