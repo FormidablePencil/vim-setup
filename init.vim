@@ -7,6 +7,8 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 "source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/commands/main.vim
+source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
+source $HOME/.config/nvim/plug-config/ranger.vim
 
 set list
 set expandtab
@@ -22,6 +24,7 @@ set mouse=a
 
 let g:startify_session_dir = '~/.config/nvim/sessions'
 
+set re=0 " fixes the performance of syntax highlight
 
 """""""""""""""""""""""""""""""""""""""""""
 " => Theme
@@ -41,15 +44,7 @@ highlight SneakScope guifg=red guibg=pink ctermfg=red ctermbg=blue
 
 
  "let g:lightline.colorscheme = 'default'
- let g:lightline = {'colorscheme': 'wombat' }
 let g:airline_theme='transparent' "biogoo, wombat, transparent, minimalist, term, behilet, owo  => biogoo, grayscale, transparent
-
-
-
-
-
-
-
 
 
 
