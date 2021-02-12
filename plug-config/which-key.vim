@@ -71,8 +71,7 @@ let g:vanilla_vim_map['n'] = {
       \ 'shift d'                 : [''     , 'delete from where you are to the end']          ,
       \ ' d<num>j/k'                 : [''     , 'deleted from where u at to number']          ,
       \ '<leader> cc'             : [''     , 'comment out']          ,
-      \ ':m .+<number>'           : [''     , 'move line up num']          ,
-      \ ':m .-<number>'           : [''     , 'move line down num']          ,
+      \ 'control jk'           : [''     , 'move line up/down num']          ,
       \ 'o,O'                     : [''     , 'insert line above/below']          ,
       \'ctrl 6' : ['','jump back to prev file'],
 \ 'ctrl y ,' : ['','activate emmet snippet'],
@@ -93,13 +92,11 @@ let g:vanilla_vim_map['n'] = {
 
 let g:vanilla_vim_map['i'] = {
       \'name' : 'insert mode' ,
-\ 'I,A' : ['','(i) insert at the begin/end of the line'],
       \ 'ctrl h'                     : [''     , '(i) delete letter']          ,
       \ 'ctrl w'                     : [''     , '(i) delete word']          ,
 \ 'ctrl d | ctrl t' : ['','(i) indent left/right'],
 \ 'ctrl n | ctrl p' : ['','(i) (auto-complete) next/prev match'],
 \ 'ctrl m' : ['','enter'],
-\ 'ctrl i' : ['','(i) how auto-complete'],
 \ 'ctrl u ' : ['','(i) delete to beginning of line'],
   \ }
 

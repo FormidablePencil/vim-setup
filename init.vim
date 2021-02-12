@@ -9,6 +9,7 @@ source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/commands/main.vim
 source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
+source $HOME/.config/nvim/plug-config/fuzzy-search.vim
 
 set list
 set expandtab
@@ -41,12 +42,10 @@ hi LineNr guibg=transparent
 " colors for sneak
 highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
 highlight SneakScope guifg=red guibg=pink ctermfg=red ctermbg=blue
-
+hi Normal ctermfg=red ctermbg=red
 
  "let g:lightline.colorscheme = 'default'
 let g:airline_theme='transparent' "biogoo, wombat, transparent, minimalist, term, behilet, owo  => biogoo, grayscale, transparent
-
-
 
 
 

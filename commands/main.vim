@@ -8,11 +8,11 @@
 let mapleader = " "
 let maplocalleader= ","
 
-" Which key needs to know leader
-
 nnoremap <leader>rv :source $MYVIMRC<CR> 
 nnoremap <LocalLeader>f :CocCommand prettier.formatFile<CR>
 nnoremap <leader>g :redo<CR>
+nnoremap <C-k> :m .-2<CR>
+nnoremap <C-j> :m .+1<CR>
 
 nnoremap <C-s> gt
 nnoremap <C-a> gT
@@ -30,6 +30,7 @@ nnoremap <leader>mw :e ~/.config/nvim/plug-config/which-key.vim<CR>
 nnoremap <leader>mk :e ~/.config/kitty/kitty.conf<CR>
 
 inoremap qw console.log()<Esc>hi
+tnoremap yp<C-o><C-i> <C-\><C-n>
 
 "Floaterm
 nnoremap <leader>bf :FloatermToggle<CR>
@@ -39,10 +40,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 vmap <leader>d  :CocCommand prettier.formatFile<CR>
 nmap <leader>d  :CocCommand prettier.formatFile<CR>
+nnoremap <leader>bp :CopyPath<CR>
+nnoremap <leader>bn :CopyFileName<CR>
 
-" prettier format on save
-"command! -nargs=0 Prettier :CocCommand prettier.formatFile
-":CocCommand prettier.formatFile
-
-
+" Which key needs to know leader
 source $HOME/.config/nvim/plug-config/which-key.vim
