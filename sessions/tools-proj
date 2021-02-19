@@ -2,20 +2,20 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Documents/code/other/shortcuts-app
+cd ~/Documents/code/other/which-key-generator
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/.config/nvim/init.vim
+badd +5 src/which-key/index.tsx
+badd +1 src/App.tsx
+badd +1 ~/vimwiki/hotkeys\ &\ shortcuts/vim.wiki
+badd +7 src/Routes.tsx
+badd +5 src/layout/Navbar.tsx
 argglobal
 %argdel
-edit ~/.config/nvim/init.vim
+edit src/Routes.tsx
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -23,26 +23,6 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 89 + 89) / 178)
-exe 'vert 2resize ' . ((&columns * 88 + 89) / 178)
-argglobal
-if bufexists("~/.config/nvim/autoload/plugged/vim-startify/doc/startify.txt") | buffer ~/.config/nvim/autoload/plugged/vim-startify/doc/startify.txt | else | edit ~/.config/nvim/autoload/plugged/vim-startify/doc/startify.txt | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 102 - ((23 * winheight(0) + 24) / 48)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-102
-normal! 06|
-wincmd w
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -53,17 +33,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 16 - ((15 * winheight(0) + 24) / 48)
+let s:l = 8 - ((7 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
-normal! 022|
-lcd ~/.config/nvim
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 89 + 89) / 178)
-exe 'vert 2resize ' . ((&columns * 88 + 89) / 178)
+8
+normal! 013|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

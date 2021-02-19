@@ -28,12 +28,16 @@ nnoremap <leader>mz :e ~/.zshrc<CR>
 nnoremap <leader>mx :e ~/.config/nvim/plug-config/coc-config.vim<CR>
 nnoremap <leader>mw :e ~/.config/nvim/plug-config/which-key.vim<CR>
 nnoremap <leader>mk :e ~/.config/kitty/kitty.conf<CR>
+nnoremap <leader>mw :e ~/.config/karabiner/karabiner.json<CR>
 
 inoremap qw console.log()<Esc>hi
 tnoremap yp<C-o><C-i> <C-\><C-n>
 
 "Floaterm
 nnoremap <leader>bf :FloatermToggle<CR>
+
+"Emmet
+let g:user_emmet_leader_key='<C-l>'
 
 "prettier formatter
 command! -nargs=0 Prettier :CocCommand prettier.formatFile

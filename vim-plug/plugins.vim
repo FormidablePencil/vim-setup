@@ -17,7 +17,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " extending vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-surround'
 Plug 'pechorin/any-jump.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'mhinz/vim-startify'
@@ -30,6 +30,12 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/copypath.vim'
+Plug 'schickling/vim-bufonly'
+
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+"Plug 'preservim/nerdcommenter'
 
 " Fuzzy searching
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

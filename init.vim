@@ -20,11 +20,12 @@ set relativenumber
 set wildmenu
 set smartcase " searches for upper and lower cased
 set ignorecase " complements above line
-set mouse=a
-
+" set mouse=a
+set hidden " switch files without needing to save
 
 let g:startify_session_dir = '~/.config/nvim/sessions'
 
+set regexpengine=1
 set re=0 " fixes the performance of syntax highlight
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -48,4 +49,6 @@ hi Normal ctermfg=red ctermbg=red
 let g:airline_theme='transparent' "biogoo, wombat, transparent, minimalist, term, behilet, owo  => biogoo, grayscale, transparent
 
 
+
+"let g:user_emmet_leader_key='<C-2>'
 
