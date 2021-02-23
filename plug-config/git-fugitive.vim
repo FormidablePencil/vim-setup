@@ -1,4 +1,4 @@
-nnoremap <leader>ga :Git add .<CR>
-nnoremap <leader>gc :Git commit -m '
-nnoremap <leader>gp :Git push<CR>
-nnoremap <leader>gs :Git status<CR>
+nnoremap <localleader>ga :Git add .<CR>
+nnoremap <localleader>gc :Git commit -m '
+nnoremap <localleader>gp :Git push<CR>
+nnoremap <localleader>gs :Git status<CR>
