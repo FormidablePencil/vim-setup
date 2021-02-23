@@ -7,12 +7,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 src/main/components/top-section/index.tsx
-badd +42 src/main/components/top-section/index.scoped.sass
-badd +39 ~/.config/nvim/commands/main.vim
+badd +12 src/biography/index.tsx
+badd +1 ~/.config/nvim/vim-plug/plugins.vim
 argglobal
 %argdel
-edit src/main/components/top-section/index.scoped.sass
+edit src/biography/index.tsx
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -31,11 +30,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 42 - ((41 * winheight(0) + 27) / 55)
+let s:l = 12 - ((11 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-42
+12
 normal! 07|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

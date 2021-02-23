@@ -10,13 +10,19 @@ let maplocalleader= ","
 
 nnoremap <leader>rv :source $MYVIMRC<CR> 
 nnoremap <LocalLeader>f :CocCommand prettier.formatFile<CR>
-nnoremap <leader>g :redo<CR>
+nnoremap <leader>r :redo<CR>
 nnoremap <C-k> :m .-2<CR>
 nnoremap <C-j> :m .+1<CR>
 
-nnoremap <C-s> gt
-nnoremap <C-a> gT
+" nnoremap <C-s> gt
+" nnoremap <C-a> gT
+nnoremap <localleader>v <C-^>
+nnoremap <localleader>s :bp<CR>
+nnoremap <localleader>d :bn<CR>
+nnoremap <localleader>f :ls<CR>
+nnoremap <localleader>a :bd<CR>
 
+nnoremap <leader>mv :e ~/vimwiki/hotkeys & shortcuts/vim.wiki<CR>
 nnoremap <leader>mi :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>mp :e ~/.config/nvim/vim-plug/plugins.vim<CR>
 nnoremap <leader>mc :e ~/.config/nvim/commands/main.vim<CR>

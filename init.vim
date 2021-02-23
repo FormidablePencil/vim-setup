@@ -6,10 +6,13 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 "source $HOME/.config/nvim/plug-config/treesitter.vim
-source $HOME/.config/nvim/commands/main.vim
 source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/fuzzy-search.vim
+source $HOME/.config/nvim/plug-config/vim-sass-lint.vim
+" commands (mostly)
+source $HOME/.config/nvim/commands/main.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim
 
 set list
 set expandtab
@@ -44,11 +47,12 @@ hi LineNr guibg=transparent
 highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
 highlight SneakScope guifg=red guibg=pink ctermfg=red ctermbg=blue
 hi Normal ctermfg=red ctermbg=red
+" guttercolor
+highlight SignColumn guibg=transparent  
+" relative number
+highlight LineNr guifg=#B0B0B0
 
- "let g:lightline.colorscheme = 'default'
-let g:airline_theme='transparent' "biogoo, wombat, transparent, minimalist, term, behilet, owo  => biogoo, grayscale, transparent
-
-
+source $HOME/.config/nvim/plug-config/gitgutter.vim
 
 "let g:user_emmet_leader_key='<C-2>'
 

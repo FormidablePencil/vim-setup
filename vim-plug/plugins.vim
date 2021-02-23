@@ -10,12 +10,14 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 "Syntax highlighting
-Plug 'Galooshi/vim-import-js'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
 
 " extending vim
+Plug 'Galooshi/vim-import-js'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'pechorin/any-jump.vim'
@@ -31,6 +33,12 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/copypath.vim'
 Plug 'schickling/vim-bufonly'
+Plug 'mg979/vim-visual-multi'
+" Plug 'sagarrakshe/toggle-bool'
+Plug 'itsvinayak/image.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
