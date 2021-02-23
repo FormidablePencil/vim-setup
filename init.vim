@@ -15,6 +15,7 @@ source $HOME/.config/nvim/plug-config/vim-sass-lint.vim
 source $HOME/.config/nvim/commands/main.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/git-fugitive.vim
+source $HOME/.config/nvim/plug-config/startify.vim
 
 set list
 set expandtab
