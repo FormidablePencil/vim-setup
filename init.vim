@@ -10,9 +10,11 @@ source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/fuzzy-search.vim
 source $HOME/.config/nvim/plug-config/vim-sass-lint.vim
+
 " commands (mostly)
 source $HOME/.config/nvim/commands/main.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/git-fugitive.vim
 
 set list
 set expandtab
