@@ -54,7 +54,7 @@ hi Normal ctermfg=red ctermbg=red
 highlight SignColumn guibg=transparent  
 " relative number
 highlight LineNr guifg=#B0B0B0
-
+source $HOME/.config/nvim/plug-config/vimwiki.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 
 "let g:user_emmet_leader_key='<C-2>'

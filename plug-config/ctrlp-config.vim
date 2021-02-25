@@ -5,6 +5,12 @@ set runtimepath^=~/.config/nvim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+let g:ctrlp_prompt_mappings = {
+    \ 'CreateNewFile()':      ['<c-y>'],
+    \ 'PrtDeleteEnt()':       ['<F7>'],
+    \ 'PrtClearCache()':      ['<F5>'],
+      \}
+
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_root_markers = ['pom.xml', '.p4ignore']
 let g:ctrlp_switch_buffer = 'et'

@@ -68,6 +68,7 @@ let g:vanilla_vim_map.2 = {
 
 let g:vanilla_vim_map['n'] = {
       \ 'name' : 'edit normal mode' ,
+      \ 'shift-c'                     : [ '',' where at to end/beginning of line '],
       \ 'd,c,v{$|^}'                  : [ '','from where at to end/beginning of line '],
       \ "{d/v/y/c}i ~ ',w,[,{,p,t"    : [ "", 'del/sel/yank/c inner word' ]          ,
       \ 'shift d'                     : [ '', 'delete from where you are to the end']          ,

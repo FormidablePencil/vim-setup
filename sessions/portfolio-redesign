@@ -2,22 +2,18 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.config/nvim
+cd ~/Documents/code/websites/portfolio-redesign
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +12 ~/vimwiki/index.wiki
-badd +22 ~/vimwiki/My\ philosophical\ notes.wiki
-badd +1 term://.//2495:ranger\ --choosefiles=/tmp/chosenfile\ \"/Users/dennisaleksandrov/Documents/code/websites/tony-r\"
-badd +1 term://.//2497:ranger\ --choosefiles=/tmp/chosenfile\ \"/Users/dennisaleksandrov/Documents/code/websites/TonyRobbins\"
-badd +1 ~/Documents/code/websites/.DS_Store
-badd +10 ~/Documents/code/websites/portfolio-redesign/src/App.tsx
-badd +3 init.vim
-badd +9 plug-config/ctrlp-config.vim
+badd +5 src/App.tsx
+badd +6 src/components/presenting/index.tsx
+badd +38 ~/.zshrc
+badd +1 ~/.zsh/commands/generate-react-component.txt
 argglobal
 %argdel
-edit plug-config/ctrlp-config.vim
+edit ~/.zsh/commands/generate-react-component.txt
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -33,24 +29,6 @@ set winwidth=1
 exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
 exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 argglobal
-if bufexists("bundle/ctrlp.vim/doc/ctrlp.txt") | buffer bundle/ctrlp.vim/doc/ctrlp.txt | else | edit bundle/ctrlp.vim/doc/ctrlp.txt | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 570 - ((53 * winheight(0) + 27) / 55)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-570
-normal! 08|
-wincmd w
-argglobal
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -60,11 +38,29 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 27) / 55)
+let s:l = 33 - ((32 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
+33
+normal! 0
+wincmd w
+argglobal
+if bufexists("src/App.tsx") | buffer src/App.tsx | else | edit src/App.tsx | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 5 - ((4 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+5
 normal! 0
 wincmd w
 2wincmd w
