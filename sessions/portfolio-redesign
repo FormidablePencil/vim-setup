@@ -7,13 +7,12 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +5 src/App.tsx
+badd +1 src/styles/utilities.sass
 badd +6 src/components/presenting/index.tsx
-badd +38 ~/.zshrc
-badd +1 ~/.zsh/commands/generate-react-component.txt
+badd +3 src/components/presenting/index.scoped.sass
 argglobal
 %argdel
-edit ~/.zsh/commands/generate-react-component.txt
+edit src/components/presenting/index.tsx
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -38,15 +37,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 33 - ((32 * winheight(0) + 27) / 55)
+let s:l = 8 - ((7 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-33
+8
 normal! 0
 wincmd w
 argglobal
-if bufexists("src/App.tsx") | buffer src/App.tsx | else | edit src/App.tsx | endif
+if bufexists("src/components/presenting/index.tsx") | buffer src/components/presenting/index.tsx | else | edit src/components/presenting/index.tsx | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -56,12 +55,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 27) / 55)
+let s:l = 7 - ((6 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 0
+7
+normal! 021|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)

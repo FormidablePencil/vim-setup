@@ -1,7 +1,7 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""
-" Commands
+"=> Commands
 """""""""""""""""""""""""""""""""""""""""""
 
 
@@ -22,7 +22,6 @@ nnoremap <localleader>d :bn<CR>
 nnoremap <localleader>f :ls<CR>
 nnoremap <localleader>a :bd<CR>
 
-nnoremap <leader>mv :e ~/vimwiki/hotkeys & shortcuts/vim.wiki<CR>
 nnoremap <leader>mi :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>mp :e ~/.config/nvim/vim-plug/plugins.vim<CR>
 nnoremap <leader>mw :e ~/.config/nvim/plug-config/which-key.vim<CR>
@@ -56,3 +55,11 @@ nnoremap <leader>bn :CopyFileName<CR>
 
 " Which key needs to know leader
 source $HOME/.config/nvim/plug-config/which-key.vim
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> VimWiki shortcuts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <localleader>ma :e ~/vimwiki/web dev ref/index.wiki<CR>
+nnoremap <localleader>mv :e ~/vimwiki/hotkeys & shortcuts/index.wiki<CR>
+nnoremap <localleader>ms :e ~/vimwiki/philosophy and the self/index.wiki<CR>
+
