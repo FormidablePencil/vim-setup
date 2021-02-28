@@ -4,9 +4,9 @@
 call which_key#register('<Space>', "g:which_key_map")
 set timeoutlen=150
 
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <leader>:<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader>m :<c-u>WhichKey ',m'<CR>
 nnoremap <silent> <localleader>l :<c-u>WhichKey!  g:vanilla_vim_map<CR>
-
 
 """"""""""""""""""""""""""""""""
 " => naming prefixes

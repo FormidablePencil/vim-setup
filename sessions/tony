@@ -7,13 +7,12 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 src/home/index.scoped.sass
-badd +4 src/home/index.tsx
-badd +7 src/home/components/top-section/index.tsx
-badd +7 src/home/components/selection-section/index.tsx
+badd +2 src/App.tsx
+badd +16 src/Routes.tsx
+badd +5 src/biography/index.tsx
 argglobal
 %argdel
-edit src/home/components/selection-section/index.tsx
+edit src/Routes.tsx
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -32,12 +31,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 14 - ((13 * winheight(0) + 27) / 55)
+let s:l = 1 - ((0 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
-normal! 024|
+1
+normal! 07|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

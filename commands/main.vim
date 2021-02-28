@@ -24,7 +24,7 @@ nnoremap <localleader>a :bd<CR>
 
 nnoremap <leader>mi :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>mp :e ~/.config/nvim/vim-plug/plugins.vim<CR>
-nnoremap <leader>mw :e ~/.config/nvim/plug-config/which-key.vim<CR>
+nnoremap <leader>me :e ~/.config/nvim/plug-config/which-key.vim<CR>
 nnoremap <leader>mc :e ~/.config/nvim/commands/main.vim<CR>
 
 nnoremap <leader>md :e ~/Documents/code<CR>
