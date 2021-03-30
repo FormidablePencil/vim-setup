@@ -2,21 +2,20 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.config/nvim
+cd ~/Documents/code/other/parallax-effect-crystals
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +15 ~/Documents/code/websites/my-bubble/src/components/layouts/BottomNav.tsx
-badd +32 ~/Documents/code/websites/my-bubble/src/pages/contact/index.tsx
-badd +24 ~/Documents/code/websites/my-bubble/src/pages/contact/PersonalContacts.tsx
-badd +43 ~/Documents/code/websites/my-bubble/src/pages/contact/ContactSection.tsx
-badd +44 commands/main.vim
-badd +58 ~/Documents/code/websites/my-bubble/src/Routes.tsx
+badd +3408 term://.//2774:/bin/zsh
+badd +3 term://.//2836:/bin/zsh
 argglobal
 %argdel
-edit commands/main.vim
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -24,7 +23,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 argglobal
+if bufexists("term://.//2836:/bin/zsh") | buffer term://.//2836:/bin/zsh | else | edit term://.//2836:/bin/zsh | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -32,14 +34,34 @@ setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 46 - ((45 * winheight(0) + 29) / 58)
+setlocal fen
+let s:l = 13 - ((11 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-46
-normal! 019|
+13
+normal! 04|
+wincmd w
+argglobal
+if bufexists("term://.//2774:/bin/zsh") | buffer term://.//2774:/bin/zsh | else | edit term://.//2774:/bin/zsh | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 3408 - ((53 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3408
+normal! 0
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -4,7 +4,7 @@
 call which_key#register('<Space>', "g:which_key_map")
 set timeoutlen=150
 
-nnoremap <silent> <leader>:<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader>m :<c-u>WhichKey ',m'<CR>
 nnoremap <silent> <localleader>l :<c-u>WhichKey!  g:vanilla_vim_map<CR>
 
@@ -18,6 +18,7 @@ let g:which_key_map.w = { 'name' : 'wiki' }
 let g:which_key_map.g = { 'name' : 'git' }
 let g:which_key_map.h = { 'name' : 'git-gutter' }
 let g:which_key_map.s = { 'name' : 'navigate project' }
+let g:which_key_map.z = { 'name' : 'organize imports' }
 
 """"""""""""""""""""""""""""""""
 " => vanilla vim
@@ -96,6 +97,9 @@ let g:vanilla_vim_map['n'] = {
 
 let g:vanilla_vim_map['i'] = {
       \ 'name' : 'insert mode' ,
+      \ 'CTRL-R {register}'      : [ '','While in insert mode hit']          ,
+      \ 'CTRL-R *'               : [ '','will insert in the contents of the clipboard']          ,
+      \ 'CTRL-R "'               : [ '','(the unnamed register) inserts the last delete or yank']          ,
       \ 'ctrl h'                 : [ '','(i) delete letter']          ,
       \ 'ctrl w'                 : [ '','(i) delete word']          ,
       \ 'ctrl d | ctrl t'        : [ '','(i) indent left/right'],
@@ -119,6 +123,7 @@ let g:vanilla_vim_map.3 = {
 
 let g:vanilla_vim_map.4 = {
       \ 'name' : 'meta' ,
+      \ ',gx'             : [ '','open folder in finder'],
       \ '<C-g>'           : [ '','see location of file'],
       \ 'space rv'        : [ '', 'restart vim']          ,
       \ '<C-\><C-n>'      : [ '', 'close terminal']          ,

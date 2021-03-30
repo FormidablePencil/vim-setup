@@ -4,23 +4,25 @@
 "=> Commands
 """""""""""""""""""""""""""""""""""""""""""
 
-
 let mapleader = " "
 let maplocalleader= ","
 
 nnoremap <leader>rv :source $MYVIMRC<CR> 
 nnoremap <LocalLeader>f :CocCommand prettier.formatFile<CR>
 nnoremap <leader>r :redo<CR>
-nnoremap <C-k> :m .-2<CR>
-nnoremap <C-j> :m .+1<CR>
-
+" nnoremap <C-k> :m .-2<CR>
+" nnoremap <C-j> :m .+1<CR>
 " nnoremap <C-s> gt
+
 " nnoremap <C-a> gT
 nnoremap <localleader>v <C-^>
 nnoremap <localleader>s :bp<CR>
 nnoremap <localleader>d :bn<CR>
 nnoremap <localleader>f :ls<CR>
 nnoremap <localleader>a :bd<CR>
+
+nnoremap <leader>z :CocCommand tsserver.organizeImports<CR>
+nnoremap <leader>x :w<CR>
 
 nnoremap <leader>mi :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>mp :e ~/.config/nvim/vim-plug/plugins.vim<CR>
@@ -35,8 +37,12 @@ nnoremap <leader>mx :e ~/.config/nvim/plug-config/coc-config.vim<CR>
 nnoremap <leader>mw :e ~/.config/nvim/plug-config/which-key.vim<CR>
 nnoremap <leader>mk :e ~/.config/kitty/kitty.conf<CR>
 nnoremap <leader>mw :e ~/.config/karabiner/karabiner.json<CR>
+nnoremap <leader>mw :e ~/.config/karabiner/karabiner.json<CR>
+nnoremap <leader>mr :e ~/vimwiki/web dev ref/index.wiki<CR>
 
 inoremap qw console.log()<Esc>hi
+nnoremap <leader>, <Esc>$a,<Esc>
+
 tnoremap yp<C-o><C-i> <C-\><C-n>
 
 "Floaterm
