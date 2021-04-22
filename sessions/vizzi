@@ -1,0 +1,111 @@
+let SessionLoad = 1
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/Documents/code/vizzi/vizzi-next/vizzi-nuxtjs
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 ~/Documents/code/vizzi/vizzi-next/vizzi-api/database/Model.ts
+badd +10 pages/dashboard/index.vue
+badd +11 pages/feed/index.vue
+badd +1 pages/exhibit/index.vue
+badd +9 pages/feedtest.vue
+badd +1 pages/a-hidden-place-no-one-will-find-because-i-made-the-url-stupid-long.vue
+badd +27 components/Feed/Card.vue
+badd +16 components/Feed/Grid.vue
+badd +1 components/Exhibit/Wizard/PreviewMode.vue
+badd +1 components/Gallery.vue
+argglobal
+%argdel
+edit components/Feed/Grid.vue
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 64 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 63 + 96) / 192)
+exe 'vert 3resize ' . ((&columns * 63 + 96) / 192)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 18 - ((17 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+18
+normal! 010|
+wincmd w
+argglobal
+if bufexists("pages/feed/index.vue") | buffer pages/feed/index.vue | else | edit pages/feed/index.vue | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 7 - ((6 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+7
+normal! 0
+wincmd w
+argglobal
+if bufexists("components/Feed/Card.vue") | buffer components/Feed/Card.vue | else | edit components/Feed/Card.vue | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 27 - ((26 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+27
+normal! 0
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 64 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 63 + 96) / 192)
+exe 'vert 3resize ' . ((&columns * 63 + 96) / 192)
+tabnext 1
+if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFI
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

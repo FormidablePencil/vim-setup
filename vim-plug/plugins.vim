@@ -15,11 +15,11 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'leafOfTree/vim-vue-plugin'
 
 " extending vim
 Plug 'Galooshi/vim-import-js'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-surround'
 Plug 'pechorin/any-jump.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'mhinz/vim-startify'
@@ -39,10 +39,17 @@ Plug 'itsvinayak/image.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
+Plug 'mattn/webapi-vim'
+Plug 'heavenshell/vim-slack'
+Plug 'elzr/vim-json'
+Plug 'kevinoid/vim-jsonc'
+Plug 'dgraham/vim-eslint'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'suy/vim-context-commentstring'
+Plug 'zsugabubus/vim-commentr'
 "Plug 'preservim/nerdcommenter'
 
 " Fuzzy searching

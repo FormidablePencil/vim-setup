@@ -17,17 +17,34 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/git-fugitive.vim
 source $HOME/.config/nvim/plug-config/startify.vim
 
+" commenting
+
+map <space>i <Cmd>ToggleComment<CR>
+" map <space>o <Cmd>Uncomment<CR>
+
+
 set list
 set expandtab
 set number
 set shiftwidth=2
 set softtabstop=2
+"
+" Set tab width to 2 columns
+set tabstop=2
+" Use 2 columns for indentation
+set shiftwidth=2
+" Use spaces when pressing <tab> key
+set expandtab
+
 set relativenumber
 set wildmenu
 set smartcase " searches for upper and lower cased
 set ignorecase " complements above line
 " set mouse=a
 set hidden " switch files without needing to save
+
+set timeoutlen=1000
+set ttimeoutlen=0
 
 let g:startify_session_dir = '~/.config/nvim/sessions'
 
@@ -56,6 +73,3 @@ highlight SignColumn guibg=transparent
 highlight LineNr guifg=#B0B0B0
 source $HOME/.config/nvim/plug-config/vimwiki.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
-
-"let g:user_emmet_leader_key='<C-2>'
-
