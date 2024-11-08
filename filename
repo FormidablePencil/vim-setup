@@ -1,21 +1,21 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/plug-config/coc-config.vim
-source $HOME/.config/nvim/plug-config/ctrlp-config.vim
-source $HOME/.config/nvim/plug-config/sneak.vim
-source $HOME/.config/nvim/plug-config/quickscope.vim
-source $HOME/.config/nvim/plug-config/airline.vim
-source $HOME/.config/nvim/plug-config/rnvimr.vim
-" source $HOME/.config/nvim/plug-config/treesitter.vim
-source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
-source $HOME/.config/nvim/plug-config/ranger.vim
-source $HOME/.config/nvim/plug-config/fuzzy-search.vim
-source $HOME/.config/nvim/plug-config/vim-sass-lint.vim
+" source $HOME/.config/nvim/vim-plug/plugins.vim
+" source $HOME/.config/nvim/plug-config/coc-config.vim
+" source $HOME/.config/nvim/plug-config/ctrlp-config.vim
+" source $HOME/.config/nvim/plug-config/sneak.vim
+" source $HOME/.config/nvim/plug-config/quickscope.vim
+" source $HOME/.config/nvim/plug-config/airline.vim
+" source $HOME/.config/nvim/plug-config/rnvimr.vim
+" \"source $HOME/.config/nvim/plug-config/treesitter.vim
+" source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
+" source $HOME/.config/nvim/plug-config/ranger.vim
+" source $HOME/.config/nvim/plug-config/fuzzy-search.vim
+" source $HOME/.config/nvim/plug-config/vim-sass-lint.vim
 "
-\" commands (mostly)
-source $HOME/.config/nvim/commands/main.vim
-source $HOME/.config/nvim/plug-config/floaterm.vim
-source $HOME/.config/nvim/plug-config/git-fugitive.vim
-source $HOME/.config/nvim/plug-config/startify.vim
+" \" commands (mostly)
+" source $HOME/.config/nvim/commands/main.vim
+" source $HOME/.config/nvim/plug-config/floaterm.vim
+" source $HOME/.config/nvim/plug-config/git-fugitive.vim
+" source $HOME/.config/nvim/plug-config/startify.vim
 
 " commenting
 
