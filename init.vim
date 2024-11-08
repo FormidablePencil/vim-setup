@@ -10,19 +10,28 @@ source $HOME/.config/nvim/plug-config/syntax-highlighting.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/fuzzy-search.vim
 source $HOME/.config/nvim/plug-config/vim-sass-lint.vim
-"
-\" commands (mostly)
 source $HOME/.config/nvim/commands/main.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/git-fugitive.vim
 source $HOME/.config/nvim/plug-config/startify.vim
 
+"""""" region Commands to clean up and put into their own compositions """"""
 " commenting
 
 map <space>i <Cmd>ToggleComment<CR>
 " map <space>o <Cmd>Uncomment<CR>
 
 set clipboard+=unnamedplus
+
+" config custom script sys_clipbrd.sh. Read in config-custom/README.md about it
+function! CopyToClipboard()
+    execute ':w !tee /tmp/tempsysclipbrdfile'
+    :! /path/to/your/script/sys_clipbrd.sh
+endfunction
+
+nnoremap <leader>cr :call CopyToClipboard()<CR>
+"""""" endregion Commands to clean up and put into their own compositions """"""
+
 
 set list
 set expandtab
