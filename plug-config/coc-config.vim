@@ -30,7 +30,7 @@ vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_next = '<tab>'
+" let g:coc_snippet_next = '<tab>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
