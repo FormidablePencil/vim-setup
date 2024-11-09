@@ -7,3 +7,7 @@ root is ~/.config/nvim
 ## Todo after plug installation
 
 sudo apt install ranger
+
+## Modififications
+
+Copy to clipboard has been handled customly since it didn't work in chromeos and android

@@ -1,5 +1,3 @@
-
-
 """""""""""""""""""""""""""""""""""""""""""
 "=> Commands
 """""""""""""""""""""""""""""""""""""""""""
@@ -7,7 +5,10 @@
 let mapleader = " "
 let maplocalleader= ","
 
-nnoremap <leader>rv :source $MYVIMRC<CR> 
+source $HOME/.config/nvim/commands/copy_selected_text_to_clipboard.vim
+
+" source nvim
+nnoremap <leader>rv :source $MYVIMRC<CR>
 nnoremap <LocalLeader>f :CocCommand prettier.formatFile<CR>
 nnoremap <leader>r :redo<CR>
 " nnoremap <C-k> :m .-2<CR>

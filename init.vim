@@ -21,15 +21,7 @@ source $HOME/.config/nvim/plug-config/startify.vim
 map <space>i <Cmd>ToggleComment<CR>
 " map <space>o <Cmd>Uncomment<CR>
 
-set clipboard+=unnamedplus
-
-" config custom script sys_clipbrd.sh. Read in config-custom/README.md about it
-function! CopyToClipboard()
-    execute ':w !tee /tmp/tempsysclipbrdfile'
-    :! /path/to/your/script/sys_clipbrd.sh
-endfunction
-
-nnoremap <leader>cr :call CopyToClipboard()<CR>
+" set clipboard+=unnamedplus
 """""" endregion Commands to clean up and put into their own compositions """"""
 
 
